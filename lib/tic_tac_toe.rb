@@ -30,8 +30,7 @@ def input_to_index(user_input)
 
 def move(location, player = "X")
   @board[location] = player
-  turn_count
-  display_board
+
 end
 
 def position_taken?(location)

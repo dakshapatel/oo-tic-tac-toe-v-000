@@ -50,7 +50,7 @@ def current_player
     @board.count{|token| token == "X" || token == "O"}
   end
 
-  
+
 
   def turn
     puts "Please enter 1-9:"

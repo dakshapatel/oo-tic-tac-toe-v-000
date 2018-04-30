@@ -28,7 +28,7 @@ def input_to_index(user_input)
     s - 1
  end
 
-def move(location, player = "X")
+def move(location, player = "X" || "O")
   @board[location] = player
   turn_count
   display_board

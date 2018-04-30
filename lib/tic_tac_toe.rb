@@ -59,7 +59,7 @@ def turn
     else m == false
       until m == true
         puts "Sorry, that was an invalid move. Please enter 1-9:"
-        
+
         i = gets.strip
         index = input_to_index(i)
         m = valid_move?(index)

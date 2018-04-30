@@ -53,7 +53,7 @@ def turn
     puts "Please enter 1-9:"
     user_input = gets.strip
     input_to_index(user_input)
-    
+
     if !valid_move?(input)
       turn
     end
@@ -62,12 +62,10 @@ def turn
   end
 
   def won?
-  WIN_COMBINATIONS.detect do |combo|
-    @board[combo[0]] == @board[combo[1]] &&
-    @board[combo[1]] == @board[combo[2]] &&
-    position_taken?(@board, combo[0])
+    WIN_COMBINATIONS.find do |win_combo|
+      @board[win_combo[0]] == @board[win_combo[1]] && @board[win_combo[0]] == @board[win_combo[2]] && position_taken?(win_combo[1])
+    end
   end
-end
 
 
 def full?
